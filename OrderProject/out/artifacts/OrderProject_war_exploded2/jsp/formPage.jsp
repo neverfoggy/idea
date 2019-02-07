@@ -314,7 +314,7 @@
 
 
 <!-- Optional JavaScript -->
-<script type="javascript/text">
+<script >
     function loadDoc() {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
@@ -322,7 +322,7 @@
                document.getElementById('change').innerHTML = xhttp.responseText;
             }
         };
-    xhttp.open("GET", "http://localhost:8080/OrderProject_war_exploded2", true);
+    xhttp.open("GET", http://localhost:8080/OrderProject_war_exploded2/file.do, true);
     xhttp.send();
     }
 </script>

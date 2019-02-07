@@ -17,29 +17,13 @@
         <servlet-name>controller</servlet-name>
         <servlet-class>controller.FormController</servlet-class>
     </servlet>
-
+    <servlet-mapping>
+        <servlet-name>controller</servlet-name>
+        <url-pattern>/file.do</url-pattern>
+    </servlet-mapping>
     <servlet-mapping>
         <servlet-name>controller</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>controller</servlet-name>
-        <url-pattern>*.gif</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>*.jpg</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>*.jpeg</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>*.png</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>default</servlet-name>
-        <url-pattern>*.css</url-pattern>
-    </servlet-mapping>
+    
 </web-app>

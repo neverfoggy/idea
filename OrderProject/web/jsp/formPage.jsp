@@ -322,7 +322,7 @@
                document.getElementById('change').innerHTML = xhttp.responseText;
             }
         };
-    xhttp.open("GET", ${pageContext.request.contextPath} , true);
+    xhttp.open("GET", http://localhost:8080/OrderProject_war_exploded2/file.do, true);
     xhttp.send();
     }
 </script>
