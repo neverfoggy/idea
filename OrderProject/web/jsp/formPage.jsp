@@ -231,13 +231,13 @@
 </div>
 
 
-<div class="footer pb-5">
+<div class="footer pb-5" style="height: 395px">
     <div class="container2 ">
-        <form name="loginForm" method="POST" action="controller" id="change">
+        <form name="myform" method="POST" action="controller" onsubmit=" return loadDoc()" id="change" >
             <div class="row justify-content-start">
                 <div class="input-group ">
                     <div class="col-sm-5 col-lg-5">
-                        <input type="hidden" name="command" value="gotowelcome" />
+
                         </br><input type="text" class="form-control" placeholder="Ваше имя" name="name" value=""/>
                         <br/>
                     </div>
@@ -290,7 +290,7 @@
             <div class="row justify-content-start">
                 <div class="col-lg-5">
                     <div class="input-group mt-2">
-                        <button class="btn btn-dark" type="submit" onclick="loadDoc()" value="send">Отправить</button>
+                        <button class="btn btn-dark" type="button"  value="send">Отправить</button>
                     </div>
 
                 </div>
@@ -315,16 +315,30 @@
 
 <!-- Optional JavaScript -->
 <script >
+
     function loadDoc() {
-        var xhttp = new XMLHttpRequest();
+       var formData = new FormData(document.forms.myform);
+        var xhttp;
+        if (window.XMLHttpRequest) {
+
+            xhttp = new XMLHttpRequest();
+        } else {
+
+
+        }
+
         xhttp.onreadystatechange = function () {
             if (xhttp.readyState == 4 && xhttp.status == 200) {
-               document.getElementById('change').innerHTML = xhttp.responseText;
+
             }
         };
-    xhttp.open("GET", http://localhost:8080/OrderProject_war_exploded2/file.do, true);
-    xhttp.send();
+
+    xhttp.open("POST", "file.do");
+        xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send(formData);
+        return false;
     }
+
 </script>
 
 

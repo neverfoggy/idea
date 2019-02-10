@@ -29,7 +29,7 @@ public class GoToWelcomeCommand implements DefineCommand {
         String number = request.getParameter(PARAM_NUMBER);
         String email = request.getParameter(PARAM_EMAIL);
         String comment = request.getParameter(PARAM_COMMENT);
-        Runner.insert(request);
+
         return page;
 
     }

@@ -18,9 +18,10 @@ public class FormController extends HttpServlet {
     }
 
     private void processRequest(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Runner.insert(request);
         String text = "<h2> your form is in process</h2>";
         response.setContentType("text/html");
         response.getWriter().write(text);
-        Runner.insert(request);
+
     }
 }

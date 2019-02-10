@@ -4,7 +4,8 @@ package jdbc;
         import java.sql.Connection;
         import java.sql.PreparedStatement;
         import java.sql.SQLException;
-        import command.GoToWelcomeCommand;
+        import java.sql.Statement;
+
 
 public class DBHelper {
     private Connection connect;
@@ -15,7 +16,7 @@ public class DBHelper {
                 PreparedStatement ps = null;
                 try {
 
-                    ps = connect.prepareStatement("INSERT INTO orders (name, number, email, comment) VALUES ( ?, ?, ?, ?);");
+                    ps = connect.prepareStatement("INSERT INTO orders (name, number, email, comment) VALUES ( ?, ?, ?, ?);",Statement.RETURN_GENERATED_KEYS);
                     ps.setString(1,request.getParameter("name"));
                     ps.setString(2,request.getParameter("number"));
                     ps.setString(3,request.getParameter("email"));
