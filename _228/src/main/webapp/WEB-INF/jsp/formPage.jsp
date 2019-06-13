@@ -25,10 +25,10 @@
     <style>
 
 
-        <%@include file="../../css/custom.css"%>
+        <%@include file="../css/custom.css"%>
 
     </style>
-    <script src="js/custom.js">
+    <script type="application/javascript" src="js/custom.js">
 
     </script>
 
@@ -234,78 +234,92 @@
 </div>
 
 
-<div class="footer pb-5" style="height: 395px">
-    <div class="container2 ">
-        <form name="myform" method="POST"  action="" id="change" >
-            <div class="row justify-content-start">
-                <div class="input-group ">
-                    <div class="col-sm-5 col-lg-5">
+<div class="footer pb-5  d-flex align-items-end " style="min-height: 383px">
+    <div class="row container2 mx-auto ">
+        <div class="col-sm-12 col-lg-6  d-flex align-items-start ">
+            <div class="  justify-content-center lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            <form name="orderform" method="POST" id="change">
 
-                        </br><input type="text" class="form-control" placeholder="Ваше имя" name="name" value="anton"/>
+                <div class="input-group ">
+                    <div class="col">
+
+                        </br><input type="text" class="form-control" placeholder="Ваше имя" id="nameput" name="name" value=""/>
                         <br/>
                     </div>
                 </div>
-            </div>
 
 
 
-            <div class="row ">
+
+
                 <div class="input-group ">
-                    <div class="col-sm-5 col-lg-5">
-                        <input type="text" class="form-control" placeholder="Ваш телефон " name="number" value="123"/>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Ваш телефон " id="numberput" name="number"  value=""/>
                         <br/>
                     </div>
                 </div>
-            </div>
 
-            <div class="row ">
+
+
                 <div class="input-group ">
-                    <div class="col-sm-5 col-lg-5">
-                        <input type="text" class="form-control" placeholder="Ваш email (не обязательно) " name="email" value="@"/>
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Ваш email (не обязательно)" id="emailput" name="email" value=""/>
                         <br/>
                     </div>
                 </div>
-            </div>
 
 
 
-            <div class="row justify-content-start">
-                <div class="col-sm-5 col-lg-5">
+
+
+                <div class="col">
                     <div class="input-group ">
 
 
 
 
-                        <textarea class="form-control" aria-label="With textarea" placeholder=" Ваш комментарий"name="comment" cols="40" rows="3"></textarea>
+                        <textarea class="form-control" aria-label="With textarea" placeholder=" Ваш комментарий" id="commentput" name="comment" cols="40" rows="3"></textarea>
                     </div>
                 </div>
 
-                <div class="сol-sm-5 col-lg-7 text-right " style="font-family: 'PT Sans', sans-serif;">
+
+
+
+
+
+
+                <div class="col">
+                    <div class="input-group ">
+                        <button class="btn btn-dark" type="submit" id="buttonput" value="send">Отправить</button>
+                    </div>
+                </div>
+
+
+
+
+
+
+            </form>
+        </div>
+
+        <div class="col-sm-12 col-lg-6 d-flex align-items-end ">
+            <div class="row">
+
+                <div class="col-12 text-right " style="font-family: 'PT Sans', sans-serif;">
                     Индвидуальный предприниматель Ващилов Д.С.<br>
                     УНП 691712803<br>
 
                 </div>
-
-            </div>
-
-
-
-            <div class="row justify-content-start">
-                <div class="col-lg-5">
-                    <div class="input-group mt-2">
-                        <input  type="submit" onclick="return load();"  value="send">
-                    </div>
-
-                </div>
-                <div class="сol-sm-5 col-lg-7 text-right " style="font-family: 'PT Sans', sans-serif;">
+                <div class=" col-12 text-right " style="font-family: 'PT Sans', sans-serif;">
                     <br>
                     Сайт не является публичной офертой
 
                 </div>
             </div>
 
+        </div>
 
-        </form>
+
         <!--container -->
     </div>
     <!--footer -->
